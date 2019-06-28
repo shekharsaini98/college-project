@@ -1,0 +1,79 @@
+<div class="row mb-5 mt-3">
+  <div class="offset-2 col-md-8">
+    <form [formGroup]="formControl" (ngSubmit)="onSubmit()">
+    <mat-card-content>
+      <div class="row">
+        <button mat-raised-button color="accent" class="col-md-12 formbutton">Service Form</button>
+      </div>
+      <div class="row mt-2">
+          <mat-form-field class="col-md-12">
+            <input matInput placeholder="Address" formControlName="Address">
+          </mat-form-field>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-12">
+          <label for="exampleFormControlSelect1">Select Service</label>
+          <select class="form-control" id="exampleFormControlSelect1" (change)="ChargeCalc()" formControlName="ServiceName">
+            <optgroup label="House Keeping">
+              <option value="clean">Cleaning</option>
+              <option value="renovate">Renovation</option>
+            </optgroup>
+            <hr>
+            <optgroup label="Laundry">
+              <option value="dryClean">Dry Cleaning</option>
+              <option value="normalWash">Normal Washing</option>
+            </optgroup>
+            <hr>
+            <optgroup label="Cooking">
+              <option value="Cookveg">Vegiterian</option>
+              <option value="Cooknonveg">Non Vegiterian</option>
+            </optgroup>
+            <hr>
+            <optgroup label="Catering">
+              <option value="Catveg">Vegiterian</option>
+              <option value="Catnonveg">Non Vegiterian</option>
+            </optgroup>
+          </select>
+        </div>
+      </div> 
+      <div class="row">
+        <div class="col-md-2">
+          <span style="color:gray">Time:</span> 
+        </div>
+        <div class="col-md-1">
+            <span style="color:gray">START:</span> 
+        </div>
+        <div class="col-md-4">
+          <input type="time" placeholder="Choose start time" formControlName="startTime">
+        </div>
+        <div class="col-md-1">
+            <span style="color:gray">END:</span> 
+        </div>
+        <div class="col-md-4">
+            <input type="time" placeholder="Choose end time" formControlName="endTime">
+        </div>
+      </div>
+      <div class="row">
+        <mat-form-field class="col-md-12">
+          <input matInput [min]="minDate" [matDatepicker]="picker" placeholder="Choose a date for the service" formControlName="DateOfService" readonly>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field class="example-full-width col-md-12">
+          <input type="number" matInput placeholder="Charges" formControlName="charges" readonly>
+          <mat-icon matSuffix><i class="fa fa-rupee"></i></mat-icon>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    </form>
+  </div>
+</div>
+
+
+
+
+    
+<router-outlet></router-outlet>   

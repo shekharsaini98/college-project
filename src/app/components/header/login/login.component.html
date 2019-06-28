@@ -1,0 +1,15 @@
+<div class="example-container">
+    <p id="ErrorMessage" *ngIf='message' >*{{message}}</p>
+  <form [formGroup]="formFields" (ngSubmit)="Login()">
+  <mat-form-field class="col-md-12">
+    <input matInput placeholder="Email" type="email" formControlName="Email"/>
+  </mat-form-field>
+
+  <mat-form-field class="col-md-12">
+    <input matInput placeholder="password" type="password" formControlName="Password"/>
+  </mat-form-field>
+  <button mat-raised-button color="primary" class="col-md-12"><b>Log In</b></button>
+
+</form><br/>
+<div class ="login">New User?? Then <a  (click)='newUser()'>SignUp</a></div>
+</div>

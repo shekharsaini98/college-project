@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+}
+ .servicecharge{
+     color: #FF366D;
+ } 
+ .mat-header-cell{
+    background-color: #FF366D;
+    color: white;
+    font-size: 20px;
+ }
+.mat-row:nth-child(even){
+     background-color:rgb(206, 206, 206);
+ }
+ .mat-row:hover{
+     transform: scaleY(1.3);
+
+
+ }

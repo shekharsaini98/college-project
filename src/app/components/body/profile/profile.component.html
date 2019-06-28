@@ -1,0 +1,177 @@
+<div class="row m-0 mt-3 mb-5">
+
+  <div class="col-md-3 p-0">
+    <div class="row m-0">
+      <div class="col-md-12 p-0">
+        <form [formGroup]="formControl" enctype="multipart/form-data">
+        <div class="col-md-2 p-0">
+          <span class="userprofileEdit"><a (click)="InputFile.click()"><i class='fas fa-user-edit'
+                                           style='font-size:18px;color:#ffffff;background-color:#FF366D;padding: 8px;border-radius: 40px'><input class="inputhidden"
+            type="file" #InputFile (change)="onFileChange($event)"></i></a></span>
+        </div>
+        </form>
+        <img [src]="user$.ImageUrl" [alt]="user$.ImageUrl" alt = 'assets/user_profile/default-user.png' class="profileSize">
+      </div>
+    </div>
+    <!--    <div class="row m-0 ml-4 mr-4 rowshadow">-->
+    <!--      <div class="col-md-10 p-0">-->
+    <p class="userName">{{user$.Username}}</p>
+
+    <!--      </div>-->
+
+    <!--    </div>-->
+    <div class="row m-0 ml-4 mr-4 mt-1 rowshadow">
+      <div class="col-md-2 p-0">
+          <span class="useremaillogo">
+              <i class="material-icons"
+                 style='font-size:18px;color:#ffffff;background-color:#FF366D;padding: 8px;border-radius: 4px'>email</i>
+          </span>
+      </div>
+      <div class="col-md-10 p-0">
+        <p class="useremail">{{user$.Email}}</p>
+      </div>
+    </div>
+    <div class="row m-0 ml-4 mr-4 rowshadow">
+      <div class="col-md-2 p-0">
+        <span class="userprofileEdit"><i class='fas fa-home'
+                                         style='font-size:18px;color:#ffffff;background-color:#FF366D;padding: 8px;border-radius: 4px'></i></span>
+      </div>
+      <div class="col-md-10 p-0">
+        <p class="">{{user$.State}},{{user$.Country}}</p>
+      </div>
+    </div>
+    <div class="row m-0 ml-4 mr-4 rowshadow">
+      <div class="col-md-2 p-0">
+        <span class="userprofileEdit"><i class='fas fa-mobile-alt'
+                                         style='font-size:18px;color:#ffffff;background-color:#FF366D;padding: 8px;border-radius: 4px;width: 36px; text-align:center'></i></span>
+      </div>
+      <div class="col-md-10 p-0">
+        <p class="">{{user$.PhoneNumber}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-9 p-0">
+    <div class="row m-0 ml-4 mr-4 mt-4">
+      <h6>User Name:<h3 class="ml-5">{{user$.Username}}</h3></h6>
+
+    </div>
+    <div class="row m-0 ml-4 mr-4">
+      <h6>Personal Information:</h6>
+    </div>
+    <div class="row m-0 ml-4 mr-4">
+      <div class="col-md-11 p-0 ml-5">
+        <!--          <div class="skillbox">-->
+        <!--              <i class='fab fa-html5' style='font-size:36px;color:white;'><h6> <small>HTML</small> </h6></i>-->
+        <!--          </div>-->
+        <!--          <div class="skillbox2">-->
+        <!--              <i class='fab fa-css3-alt' style='font-size:36px;color:white;'><h6> <small>CSS</small> </h6></i>-->
+        <!--          </div>-->
+        <!--          <div class="skillbox">-->
+        <!--              <i class='fab fa-js-square' style='font-size:36px;color:white;'><h6> <small>JavaScript</small> </h6></i>-->
+        <!--          </div>-->
+        <!--          <div class="skillbox2">-->
+        <!--              <i class='fab fa-php' style='font-size:36px;color:white;'><h6> <small>PHP</small> </h6></i>-->
+        <!--          </div>-->
+        <!--          <div class="skillbox">-->
+        <!--              <i class='fas fa-database' style='font-size:36px;color:white;'><h6> <small>Database</small> </h6></i>-->
+        <!--          </div>-->
+        <!--          <div class="skillboxadd">-->
+        <!--              <i class='fas fa-plus' style='font-size:30px;color:white;'></i>-->
+        <!--          </div>-->
+        <form [formGroup]="formControl" enctype="multipart/form-data">
+        <mat-accordion class="example-headers-align" >
+          <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Address:
+              </mat-panel-title>
+              <mat-panel-description>
+                {{user$.Address}}
+                <mat-icon>edit</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <mat-form-field>
+              <input matInput placeholder="First Line"formControlName="fLine">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Second Line"formControlName="lLine">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput type="number" placeholder="PinCode"formControlName="pCode">
+            </mat-form-field>
+            <mat-form-field>
+              <select matNativeControl placeholder="Country" (click)='state()' formControlName="Country">
+                <option *ngFor='let country of country$'  >{{country}}</option>
+              </select>
+            </mat-form-field>
+
+              <mat-form-field>
+                <select matNativeControl placeholder="states"formControlName="State">
+                  <option *ngFor='let states of States' >{{states}}</option>
+                </select>
+              </mat-form-field>
+              <mat-action-row>
+                <button mat-button color="primary" (click)="nextStep()">Next</button>
+              </mat-action-row>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+               User Name:
+              </mat-panel-title>
+              <mat-panel-description>
+                {{user$.Username}}
+                <mat-icon>edit</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <mat-form-field>
+              <input matInput placeholder="Username"formControlName="Username">
+            </mat-form-field>
+            <mat-action-row>
+              <button mat-button color="warn" (click)="prevStep()">Previous</button>
+              <button mat-button color="primary" (click)="nextStep()">Next</button>
+            </mat-action-row>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+              Phone Nmumber:
+              </mat-panel-title>
+              <mat-panel-description>
+                {{user$.PhoneNumber}}
+                <mat-icon>edit</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-form-field>
+              <input matInput type="number" placeholder="Phone Number"formControlName="PhoneNumber">
+            </mat-form-field>
+
+
+            <mat-action-row>
+              <button mat-button color="warn" (click)="prevStep()">Previous</button>
+              <button mat-button color="primary" (click)="nextStep()">End</button>
+            </mat-action-row>
+          </mat-expansion-panel>
+
+        </mat-accordion>
+          <div class="row mt-5">
+            <div class="col-md-12 text-center">
+              <button type="submit" mat-raised-button color="primary"  (click)="onSubmit()">Save</button>
+
+
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+</div>

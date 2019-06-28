@@ -1,0 +1,79 @@
+<mat-card *ngIf="Role.Admin||Role.Customer">
+  <mat-table  [dataSource]="dataSource" class="mat-elevation-z8 bdr0 t-bdr p-0">
+
+    <ng-container matColumnDef="ServiceName">
+      <mat-header-cell *matHeaderCellDef class="bg-info text-light">Service Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.ServiceName}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="BookingDate">
+      <mat-header-cell *matHeaderCellDef class="bg-info text-light"> Booking Date </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.BookingDate}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="DateOfService">
+      <mat-header-cell *matHeaderCellDef class="bg-info text-light"> Scheduled Date</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.DateOfService}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="status">
+      <mat-header-cell *matHeaderCellDef class="bg-info text-light"> Status</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.status}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="action">
+      <mat-header-cell *matHeaderCellDef class="bg-info text-light"> Action </mat-header-cell>
+      <mat-cell *matCellDef="let element"><i class="material-icons CP text-danger" > delete </i>  </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</mat-card>
+
+
+<mat-card *ngIf="Role.Admin||Role.Worker">
+  <mat-table  [dataSource]="dataSource1" class="mat-elevation-z8 bdr0 t-bdr p-0">
+
+    <ng-container matColumnDef="ServiceName">
+      <mat-header-cell *matHeaderCellDef class="bg-info text-light">Service Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.ServiceName}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="BookedOn">
+      <mat-header-cell *matHeaderCellDef class="bg-info text-light"> Booked Date </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.BookedOn}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="serviceDueOn">
+    <mat-header-cell *matHeaderCellDef class="bg-info text-light"> Scheduled Date</mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.serviceDueOn}} </mat-cell>
+  </ng-container>
+
+    <ng-container matColumnDef="Username">
+      <mat-header-cell *matHeaderCellDef class="bg-info text-light"> User Name</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Username}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="status">
+      <mat-header-cell *matHeaderCellDef class="bg-info text-light"> Status</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.status}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="action">
+      <mat-header-cell *matHeaderCellDef class="bg-info text-light"> Action </mat-header-cell>
+      <mat-cell *matCellDef="let element"><i class="material-icons CP text-danger" > delete </i>  </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns1"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns1;"></mat-row>
+  </mat-table>
+</mat-card>

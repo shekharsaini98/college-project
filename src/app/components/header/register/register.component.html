@@ -1,0 +1,52 @@
+<div class="example-container">
+
+  <p id="ErrorMessage" *ngIf='message' >*{{message}}</p>
+  <form [formGroup]="formFields" (ngSubmit)="Register()" >
+    <mat-label><h3 align = "center"> Register</h3></mat-label>
+    <mat-form-field class="col-md-6 col-sm-12">
+      <input matInput placeholder="User Name" type="text" formControlName="Username" required/>
+    </mat-form-field>
+
+    <mat-form-field class="col-md-6 col-sm-12">
+      <input matInput placeholder="Email" type="email" formControlName="Email" required/>
+    </mat-form-field>
+
+    <mat-form-field class="col-md-6 col-sm-12">
+      <input matInput placeholder="Password" type="password" formControlName="Password" required/>
+    </mat-form-field>
+
+    <mat-form-field class="col-md-6 col-sm-12">
+      <input matInput placeholder="Confirm password" type="password" formControlName="ConfirmPassword" required/>
+    </mat-form-field>
+
+    <mat-form-field class="col-md-6 col-sm-12">
+      <input matInput placeholder="Phone Number" type="number" formControlName="PhoneNumber" required/> 
+    </mat-form-field>
+
+    <mat-form-field class="col-md-6 col-sm-12">
+      <input matInput placeholder="Address" type="text" formControlName="Address" />
+
+   
+    </mat-form-field>
+   
+<mat-form-field class="col-md-6 col-sm-12">
+  <select matNativeControl required formControlName="Country" placeholder="Select Country" (click)='state()' >
+    <option *ngFor='let country of country$'  >{{country}}</option>
+    
+  </select>
+</mat-form-field>
+
+<mat-form-field class="col-md-6 col-sm-12">
+  <select matNativeControl required formControlName="State" >
+    <option *ngFor='let states of States' >{{states}}</option>
+    
+  </select>
+</mat-form-field>
+<div class="text-center">
+  <button mat-raised-button color="primary">Register</button>
+</div>
+</form>
+<div class="login col-md-2">
+  <a (click)='loginOpen()'><b>Log-in</b></a>
+</div>
+

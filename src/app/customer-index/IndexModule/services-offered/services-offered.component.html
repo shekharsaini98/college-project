@@ -1,0 +1,77 @@
+<mat-drawer-container class="example-container row mb-5">
+  <mat-drawer-content class="col-md-12">
+    <!-- <div class="row mt-2">
+      <div class="col-md-12 text-center">
+        <h6> Welcome {{user$.Username}}</h6>
+      </div>
+    </div> -->
+    <div class="row mt-2">
+      <div class="col-md-3 text-center">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <h4>House Keeping</h4>
+          </mat-card-header>
+          <img mat-card-image src="../../../../assets/services/housekeep.jpg" alt="Services" class="imgsize">
+          <mat-card-content>
+            <p>
+              details about house keeping
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button color="primary" [routerLink]="['subCategory']" >Create Service</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="col-md-3 text-center">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <h4>Laundry</h4>
+            </mat-card-header>
+            <img mat-card-image src="../../../../assets/services/laundry.jpg" alt="Services" class="imgsize">
+            <mat-card-content>
+              <p>
+                  details about Laundry
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" [routerLink]="['subCategory']">Create Service</button>
+            </mat-card-actions>
+          </mat-card>
+      </div>
+      <div class="col-md-3 text-center">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <h4>Cooking</h4>
+            </mat-card-header>
+            <img mat-card-image src="../../../../assets/services/cooking.jpg" alt="Services" class="imgsize">
+            <mat-card-content>
+              <p>
+                  details about cooking
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" [routerLink]="['subCategory']">Create Service</button>
+            </mat-card-actions>
+          </mat-card>
+      </div>
+      <div class="col-md-3 text-center">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <h4>catering</h4>
+            </mat-card-header>
+            <img mat-card-image src="../../../../assets/services/catering.jpg" alt="Services" class="imgsize">
+            <mat-card-content>
+              <p>
+                  details about catering
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" [routerLink]="['subCategory']">Create Service</button>
+            </mat-card-actions>
+          </mat-card>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
+  
+  <router-outlet></router-outlet>  

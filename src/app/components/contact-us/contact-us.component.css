@@ -1,0 +1,18 @@
+.contactrow1{
+    background-color:#FF366D;
+    color: white;
+}
+.addressrow{
+    margin-top: 80px;
+    padding-left: 80px;
+}
+.addressrow2{
+    padding-left: 100px;
+}
+.tellname{
+    border-bottom: 1px solid gray;
+    margin-bottom: 8px;
+}
+.mainrow{
+    box-shadow:  5px 5px 15px 5px gray;
+}

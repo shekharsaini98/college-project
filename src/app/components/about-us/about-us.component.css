@@ -1,0 +1,16 @@
+.aboutrow{
+    background-image: url("../../../assets/aboutback.jpg");
+    background-color: gray;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+.slide{
+    z-index: 1;
+    background-color: #2B2F40;
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }

@@ -1,0 +1,270 @@
+/* container 1 */
+.contr1{
+    min-height: 98%;
+    background-image: url('../../../../assets/white-wall-background.png');
+    background-color: #FFFFFF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #1C1C1C;
+}
+.animate {
+
+    background-color:#FF366D;
+    animation-name: stretch;
+    animation-duration: 1.5s; 
+    animation-timing-function: linear; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-fill-mode: none;
+    animation-play-state: running;
+  }
+  
+  @keyframes stretch {
+    0% {
+      transform: translateY(30%);
+    border-radius: 100%;
+    }
+  }
+
+
+
+
+.companynamecolor{
+    color: #FF366D;
+}
+.startservicebutton{
+    border: none;
+    background-color: #FF366D;
+    color: #FFFFFF;
+    border-radius: 3px;
+    padding: 10px 15px;
+}
+h2{
+    color: #1C1C1C;
+    margin-bottom: 2%;
+}
+h6{
+    line-height: 1.8em;
+}
+p{
+    line-height: 1.6em;
+} 
+/* Scroll Mouse Animation*/
+.scroll-downs {
+    width :34px; /*34*/
+    height: 50px; /*55*/
+    padding-left: 12px;
+  }
+  .mousey {
+    width: 1px;
+    padding: 5px 10px;
+    height: 25px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+  }
+  .scroller {
+    width: 2px;
+    height: 7px;
+    border-radius: 25%;
+    background-color: #000;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+  }
+  @keyframes scroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+  }
+.scrollDown{
+    font-size: 13px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    border: none;
+    border-radius: none;
+    padding: 10px 22px;
+    background-color: #FFFFFF;
+}
+/* container 2 */
+.contr2{
+    min-height: 100%;
+    background-color: #1C1C1C;
+    color: #FFFFFF;
+    padding-top: 10%;
+    padding-bottom: 8%;
+}
+.contr2Heading{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.1em;
+}
+.contr2ServiceBox{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/* container 2 cards */
+.card-header{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 0.1em;
+    color: #2A2A2A;
+}
+.card-body{
+    background-color: #1E1E1E;
+}
+.card-headerpara2{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #232323;
+}
+/* container 3 */
+.contr3{
+    padding-top: 12%;
+    padding-bottom: 8%;
+    min-height: 98%;
+    background-image: url('../../../../assets/renovatedRoom.png');
+    background-color: #FFFFFF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #1C1C1C;
+}
+.contr3 p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 50px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.35);
+}
+/* Container 4 */
+.contr4{
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+.contr4para1{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+.contr4para2{
+    padding-top: 3%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+.contr4row2col{
+    margin-left: 12%;
+}
+.contr4row2{
+    padding-top: 4%;
+}
+.contr4cards{
+    border-color: #1E1E1E;
+}
+.contr4header{
+    background-color: #1E1E1E;
+    border-color: #1E1E1E;
+}
+.footer{
+    min-height: 90%;
+    padding-top: 8%;
+    padding-bottom: 3%;
+    background-color: #131313;
+    color: #FFFFFF;
+}
+.footerLogo{
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 85%;
+    color: #FF366D;
+}
+.footercol{
+    margin-left: 13%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.06em;
+}
+hr{
+    background-color: #FFFFFF;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.footerformalities{
+    margin-left: 10%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: 0.06em;
+}
+.copyright{
+    margin-left: 10%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.06em;
+}
+@media only screen and (max-width: 760px) {
+    .smallcenter{
+        justify-content: center;
+    }
+    .smallmargin{
+        margin-top: 16%;
+    }
+    .contr3 p{
+        font-size: 16px;
+    }
+    .contr2Heading{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 38px;
+        letter-spacing: 0.1em;
+    }
+    .contr4row2col{
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+    .social{
+        justify-content: center;
+        text-align: center;
+    }
+    .footercol{
+        margin: 0%;
+        text-align: center;
+        justify-content: center;
+    }
+    .footerLogo{
+        padding-top: 12%;
+    }
+    .footersmallmargin{
+        margin-top: 20%;
+        
+    }
+    .footercenter{
+        text-align: center;
+        justify-content: center;
+    }
+} 

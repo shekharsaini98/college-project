@@ -1,0 +1,59 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+.example-container > * {
+width: 100%;
+}
+.feedbackInfo{
+    background-color: #FF366D;
+    color: white;
+    height: 350px;
+    padding: 140px 10px;
+}
+
+.feedbackFrom{
+    background-color: white;
+    color: gray;
+    height: 350px;
+}
+mat-radio-button {
+    display:none;
+    }
+.angry:hover{
+    color: red;
+} 
+.frown:hover{
+    color: orange;
+} 
+.meh:hover{
+    color: yellow;
+}  
+.smile:hover{
+    color: lightgreen;
+}
+.laugh:hover{
+    color: green;
+}
+
+.angry1{
+  color: red;
+}
+.frown1{
+  color: orange;
+}
+.meh1{
+  color: yellow;
+}
+.smile1{
+  color: lightgreen;
+}
+.laugh1{
+  color: green;
+}
+.radio-img  > input {
+    display:none;
+}
+.radio-img  > i{
+    cursor:pointer;
+}
